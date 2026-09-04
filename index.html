@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Radfield Home Care Watford &amp; Borehamwood | Home Care &amp; Live-In Care</title>
+<meta name="description" content="Personalised home care and live-in care in Watford, Borehamwood and the surrounding areas. Speak to our local care team and arrange a free, no-obligation care consultation.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HomeHealthCareService",
+  "name": "Radfield Home Care Watford & Borehamwood",
+  "image": "",
+  "telephone": "+441923624674",
+  "email": "watford@radfieldhomecare.co.uk",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Hille Business Centre, 132a St Albans Road",
+    "addressLocality": "Watford",
+    "postalCode": "WD24 4AE",
+    "addressCountry": "GB"
+  },
+  "areaServed": ["Watford", "Borehamwood", "Hertsmere", "Three Rivers", "Rickmansworth"],
+  "sameAs": [
+    "https://www.facebook.com/RadfieldHomeCareWatford/",
+    "https://www.instagram.com/radfield_watford/"
+  ],
+  "parentOrganization": {
+    "@type": "Organization",
+    "name": "Radfield Home Care"
+  }
+}
+</script>
+<style>
+  :root{
+    --bg: #EFEAE0;
+    --surface: #FFFFFF;
+    --ink: #1E2A21;
+    --ink-soft: #4B5A4E;
+    --primary: #2E4A3B;
+    --primary-dark: #203327;
+    --primary-tint: #E4EAE3;
+    --accent: #B08A4E;
+    --accent-soft: #EDE0C6;
+    --line: #DBD3C2;
+    --sage: #7C9483;
+    --radius-s: 6px;
+    --radius-m: 14px;
+    --radius-l: 28px;
+    --max: 1180px;
+    --serif: "Fraunces", Georgia, serif;
+    --sans: "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{animation-duration:0.01ms !important; transition-duration:0.01ms !important;}
+  }
+  body{
+    margin:0;
+    font-family:var(--sans);
+    color:var(--ink);
+    background:var(--bg);
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%; display:block;}
+  a{color:inherit;}
+  h1,h2,h3,h4{font-family:var(--serif); font-weight:600; line-height:1.12; margin:0;}
+  p{margin:0;}
+  ul{margin:0; padding:0; list-style:none;}
+  button{font-family:inherit;}
+
+  .wrap{max-width:var(--max); margin:0 auto; padding:0 28px;}
+  @media (max-width:640px){ .wrap{padding:0 20px;} }
+
+  .skip-link{
+    position:absolute; left:-9999px; top:0; background:var(--primary); color:#fff;
+    padding:12px 18px; z-index:200; border-radius:0 0 8px 0;
+  }
+  .skip-link:focus{left:0;}
+
+  a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible{
+    outline:3px solid var(--accent); outline-offset:2px;
+  }
+
+  /* ---------- Buttons ---------- */
+  .btn{
+    display:inline-flex; align-items:center; justify-content:center; gap:10px;
+    padding:15px 26px; border-radius:999px; font-weight:600; font-size:15.5px;
+    text-decoration:none; border:1.5px solid transparent; cursor:pointer;
+    transition:transform .15s ease, background .2s ease, border-color .2s ease;
+    white-space:nowrap;
+  }
+  .btn:hover{transform:translateY(-1px);}
+  .btn-primary{background:var(--primary); color:#fff;}
+  .btn-primary:hover{background:var(--primary-dark);}
+  .btn-ghost{background:transparent; color:var(--ink); border-color:var(--ink);}
+  .btn-ghost:hover{background:var(--ink); color:#fff;}
+  .btn-outline-light{background:transparent; color:#fff; border-color:rgba(255,255,255,.6);}
+  .btn-outline-light:hover{background:#fff; color:var(--primary-dark);}
+  .btn-block{width:100%;}
+
+  .icon{width:20px; height:20px; flex:none; stroke:currentColor; fill:none; stroke-width:1.6; stroke-linecap:round; stroke-linejoin:round;}
+
+  /* ---------- Header ---------- */
+  header.site{
+    position:sticky; top:0; z-index:100; background:rgba(239,234,224,.92);
+    backdrop-filter:blur(8px); border-bottom:1px solid transparent;
+    transition:border-color .25s ease, box-shadow .25s ease;
+  }
+  header.site.scrolled{border-color:var(--line); box-shadow:0 6px 18px rgba(30,42,33,.05);}
+  .nav-row{display:flex; align-items:center; justify-content:space-between; padding:16px 0; gap:24px;}
+  .logo{display:flex; flex-direction:column; line-height:1; text-decoration:none; color:var(--ink);}
+  .logo strong{font-family:var(--serif); font-size:22px; font-weight:700; letter-spacing:.2px;}
+  .logo span{font-size:11.5px; color:var(--ink-soft); margin-top:3px;}
+  nav.primary{display:flex; align-items:center; gap:28px;}
+  nav.primary a{text-decoration:none; font-size:15px; font-weight:500; color:var(--ink-soft); transition:color .15s ease;}
+  nav.primary a:hover{color:var(--primary);}
+  .header-actions{display:flex; align-items:center; gap:14px;}
+  .call-pill{
+    display:flex; align-items:center; gap:8px; text-decoration:none; color:var(--primary-dark);
+    font-weight:600; font-size:15px;
+  }
+  .call-pill .icon{color:var(--accent);}
+  .nav-toggle{display:none; background:none; border:1.5px solid var(--ink); border-radius:8px; padding:8px 10px;}
+
+  @media (max-width:980px){
+    nav.primary{display:none;}
+    .nav-toggle{display:inline-flex;}
+    .call-pill span.txt{display:none;}
+  }
+
+  /* mobile drawer */
+  #mobile-menu{
+    display:none; position:fixed; inset:0; background:var(--bg); z-index:150; padding:24px;
+    overflow-y:auto;
+  }
+  #mobile-menu.open{display:block;}
+  #mobile-menu .drawer-head{display:flex; justify-content:space-between; align-items:center; margin-bottom:32px;}
+  #mobile-menu nav{display:flex; flex-direction:column; gap:4px;}
+  #mobile-menu nav a{
+    padding:16px 4px; font-size:19px; font-family:var(--serif); font-weight:600;
+    text-decoration:none; color:var(--ink); border-bottom:1px solid var(--line);
+  }
+  #mobile-menu .drawer-cta{margin-top:28px; display:flex; flex-direction:column; gap:12px;}
+
+  /* ---------- Sticky mobile call bar ---------- */
+  .mobile-call-bar{
+    display:none; position:fixed; left:0; right:0; bottom:0; z-index:120;
+    background:var(--primary); padding:10px 14px; gap:10px;
+    box-shadow:0 -6px 18px rgba(0,0,0,.15);
+  }
+  @media (max-width:760px){
+    .mobile-call-bar{display:flex;}
+    body{padding-bottom:68px;}
+  }
+  .mobile-call-bar a{
+    flex:1; display:flex; align-items:center; justify-content:center; gap:8px;
+    text-decoration:none; color:#fff; font-weight:600; font-size:15px; padding:12px 8px; border-radius:10px;
+  }
+  .mobile-call-bar a.call{background:var(--accent); color:var(--primary-dark);}
+  .mobile-call-bar a.enquire{border:1.5px solid rgba(255,255,255,.55);}
+
+  /* ---------- Hero ---------- */
+  .hero{padding:56px 0 40px;}
+  .hero-grid{display:grid; grid-template-columns:1.05fr .95fr; gap:56px; align-items:center;}
+  .hero h1{font-size:clamp(34px, 4.6vw, 58px); color:var(--primary-dark); letter-spacing:-.01em;}
+  .hero .lede{margin-top:22px; font-size:18px; color:var(--ink-soft); max-width:46ch;}
+  .hero .cta-row{display:flex; flex-wrap:wrap; gap:14px; margin-top:30px;}
+  .reassure-row{
+    display:flex; flex-wrap:wrap; gap:20px 28px; margin-top:34px; padding-top:26px;
+    border-top:1px solid var(--line);
+  }
+  .reassure-item{display:flex; align-items:center; gap:10px; font-size:14.5px; color:var(--ink-soft); font-weight:500;}
+  .reassure-item .icon{width:18px; height:18px; color:var(--accent);}
+
+  .hero-art{position:relative;}
+  .hero-art svg{width:100%; height:auto; border-radius:var(--radius-l);}
+
+  @media (max-width:980px){
+    .hero-grid{grid-template-columns:1fr; gap:36px;}
+    .hero-art{order:-1;}
+  }
+
+  /* ---------- Trust strip ---------- */
+  .trust-strip{background:var(--primary); color:#fff; padding:22px 0;}
+  .trust-row{display:flex; flex-wrap:wrap; justify-content:center; gap:14px 0;}
+  .trust-item{
+    display:flex; align-items:center; gap:10px; font-size:14.5px; font-weight:500;
+    padding:0 28px; border-right:1px solid rgba(255,255,255,.22);
+  }
+  .trust-item:last-child{border-right:none;}
+  .trust-item .icon{color:var(--accent); width:18px; height:18px;}
+  @media (max-width:760px){
+    .trust-row{flex-direction:column; align-items:flex-start; gap:14px; padding-left:4px;}
+    .trust-item{border-right:none; padding:0;}
+  }
+
+  /* ---------- Sections generic ---------- */
+  section{padding:88px 0;}
+  @media (max-width:760px){ section{padding:60px 0;} }
+  .section-head{max-width:640px; margin-bottom:48px;}
+  .section-head h2{font-size:clamp(28px, 3.4vw, 40px); color:var(--primary-dark);}
+  .section-head p{margin-top:16px; color:var(--ink-soft); font-size:17px;}
+  .band-alt{background:var(--surface);}
+
+  /* ---------- How can we help — tab selector ---------- */
+  .help-shell{display:grid; grid-template-columns:280px 1fr; gap:40px;}
+  .help-tabs{display:flex; flex-direction:column; gap:6px;}
+  .help-tab{
+    text-align:left; background:none; border:none; border-left:3px solid var(--line);
+    padding:16px 20px; font-family:var(--serif); font-size:19px; font-weight:600;
+    color:var(--ink-soft); cursor:pointer; transition:color .15s ease, border-color .15s ease;
+  }
+  .help-tab:hover{color:var(--primary);}
+  .help-tab.active{color:var(--primary-dark); border-color:var(--accent); background:var(--surface);}
+  .help-panel{display:none; background:var(--surface); border-radius:var(--radius-m); padding:40px; border:1px solid var(--line);}
+  .help-panel.active{display:grid; grid-template-columns:1fr 1fr; gap:36px; align-items:center;}
+  .help-panel .art svg{width:100%; height:auto;}
+  .help-panel h3{font-size:26px; color:var(--primary-dark);}
+  .help-panel .desc{margin-top:14px; color:var(--ink-soft); font-size:16px;}
+  .help-panel .tags{display:flex; flex-wrap:wrap; gap:8px; margin-top:18px;}
+  .help-panel .tags span{
+    font-size:13px; background:var(--primary-tint); color:var(--primary-dark);
+    padding:6px 12px; border-radius:999px; font-weight:500;
+  }
+  .help-panel .btn{margin-top:24px;}
+
+  @media (max-width:900px){
+    .help-shell{grid-template-columns:1fr;}
+    .help-tabs{flex-direction:row; overflow-x:auto; border-bottom:1px solid var(--line); gap:0;}
+    .help-tab{border-left:none; border-bottom:3px solid transparent; white-space:nowrap; padding:14px 16px;}
+    .help-tab.active{border-color:var(--accent); background:none;}
+    .help-panel.active{grid-template-columns:1fr; padding:28px;}
+    .help-panel .art{order:-1;}
+  }
+
+  /* ---------- Emotional value ---------- */
+  .value-grid{display:grid; grid-template-columns:.85fr 1.15fr; gap:56px; align-items:center;}
+  .value-grid .art svg{width:100%; height:auto; border-radius:var(--radius-l);}
+  .questions{margin-top:28px; display:flex; flex-direction:column; gap:0;}
+  .questions li{
+    padding:16px 0; border-bottom:1px solid var(--line); font-family:var(--serif);
+    font-size:19px; color:var(--primary-dark); font-weight:500;
+  }
+  .questions li:first-child{border-top:1px solid var(--line);}
+  .value-copy p + p{margin-top:16px;}
+  .value-copy p{color:var(--ink-soft); font-size:16.5px;}
+  @media (max-width:900px){
+    .value-grid{grid-template-columns:1fr;}
+  }
+
+  /* ---------- Why Radfield ---------- */
+  .benefits{display:grid; grid-template-columns:repeat(3, 1fr); gap:0; border-top:1px solid var(--line); border-left:1px solid var(--line);}
+  .benefit{padding:34px 30px; border-right:1px solid var(--line); border-bottom:1px solid var(--line);}
+  .benefit h3{font-size:19px; color:var(--primary-dark); margin-bottom:10px;}
+  .benefit p{color:var(--ink-soft); font-size:15px;}
+  @media (max-width:900px){ .benefits{grid-template-columns:repeat(2,1fr);} }
+  @media (max-width:600px){ .benefits{grid-template-columns:1fr;} }
+
+  /* ---------- Local area ---------- */
+  .area-grid{display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:start;}
+  .area-list{display:flex; flex-wrap:wrap; gap:10px; margin-top:24px;}
+  .area-list li{
+    font-size:14.5px; font-weight:500; padding:9px 16px; border-radius:999px;
+    background:var(--primary-tint); color:var(--primary-dark);
+  }
+  .map-frame{border-radius:var(--radius-m); overflow:hidden; border:1px solid var(--line); aspect-ratio:4/3.4;}
+  .map-frame iframe{width:100%; height:100%; border:0;}
+  @media (max-width:900px){ .area-grid{grid-template-columns:1fr;} }
+
+  /* ---------- How it works ---------- */
+  .steps{display:grid; grid-template-columns:repeat(3,1fr); gap:36px; counter-reset:step;}
+  .step{position:relative; padding-top:18px; border-top:2px solid var(--primary-dark);}
+  .step .num{font-family:var(--serif); font-size:44px; color:var(--accent); font-weight:600; line-height:1;}
+  .step h3{margin-top:14px; font-size:21px; color:var(--primary-dark);}
+  .step p{margin-top:10px; color:var(--ink-soft); font-size:15.5px;}
+  @media (max-width:800px){ .steps{grid-template-columns:1fr; gap:30px;} }
+
+  /* ---------- Family band ---------- */
+  .family-band{background:var(--primary-dark); color:#fff; border-radius:var(--radius-l); padding:64px 56px; text-align:left;}
+  .family-band h2{color:#fff; font-size:clamp(26px,3vw,36px); max-width:20ch;}
+  .family-band p{color:rgba(255,255,255,.82); margin-top:18px; max-width:56ch; font-size:16.5px;}
+  .family-band .btn{margin-top:26px;}
+  @media (max-width:700px){ .family-band{padding:40px 26px; border-radius:var(--radius-m);} }
+
+  /* ---------- Social proof (honest, no fabricated testimonials) ---------- */
+  .proof-grid{display:grid; grid-template-columns:1.1fr .9fr; gap:56px; align-items:start;}
+  .proof-points{display:flex; flex-direction:column; gap:22px; margin-top:8px;}
+  .proof-point{display:flex; gap:16px;}
+  .proof-point .icon{width:24px; height:24px; color:var(--accent); flex:none; margin-top:2px;}
+  .proof-point h4{font-size:16.5px; color:var(--primary-dark); margin-bottom:4px;}
+  .proof-point p{color:var(--ink-soft); font-size:15px;}
+  .social-card{background:var(--surface); border:1px solid var(--line); border-radius:var(--radius-m); padding:32px;}
+  .social-card h3{font-size:19px; color:var(--primary-dark);}
+  .social-card p{margin-top:10px; color:var(--ink-soft); font-size:15px;}
+  .social-links{display:flex; gap:12px; margin-top:20px; flex-wrap:wrap;}
+  .social-links a{
+    font-size:14px; font-weight:600; text-decoration:none; color:var(--primary-dark);
+    border:1.5px solid var(--line); padding:9px 16px; border-radius:999px;
+  }
+  .social-links a:hover{border-color:var(--primary-dark);}
+  @media (max-width:900px){ .proof-grid{grid-template-columns:1fr;} }
+
+  /* ---------- Care cost ---------- */
+  .cost-band{display:grid; grid-template-columns:1fr auto; gap:32px; align-items:center; background:var(--accent-soft); border-radius:var(--radius-l); padding:48px 52px;}
+  .cost-band h2{font-size:clamp(24px,2.8vw,32px); color:var(--primary-dark); max-width:22ch;}
+  .cost-band p{margin-top:14px; color:var(--ink-soft); max-width:56ch; font-size:16px;}
+  @media (max-width:760px){
+    .cost-band{grid-template-columns:1fr; padding:34px 24px; text-align:left;}
+  }
+
+  /* ---------- Contact ---------- */
+  .contact-grid{display:grid; grid-template-columns:.9fr 1.1fr; gap:56px; align-items:flex-start;}
+  .contact-info{display:flex; flex-direction:column; gap:22px;}
+  .contact-info .row{display:flex; gap:14px;}
+  .contact-info .row .icon{color:var(--accent); margin-top:3px;}
+  .contact-info .row a, .contact-info .row span{font-size:15.5px; color:var(--ink-soft); text-decoration:none;}
+  .contact-info .row a:hover{color:var(--primary);}
+  .contact-info h4{font-size:13.5px; text-transform:none; color:var(--primary-dark); margin-bottom:2px; font-weight:600;}
+  .contact-card{background:var(--surface); border:1px solid var(--line); border-radius:var(--radius-m); padding:36px;}
+  .contact-card .note{
+    font-size:14px; color:var(--ink-soft); background:var(--primary-tint); padding:12px 16px;
+    border-radius:var(--radius-s); margin-bottom:24px;
+  }
+  .form-row{display:grid; grid-template-columns:1fr 1fr; gap:16px;}
+  .field{margin-bottom:18px; display:flex; flex-direction:column; gap:7px;}
+  .field label{font-size:13.5px; font-weight:600; color:var(--primary-dark);}
+  .field input, .field select, .field textarea{
+    padding:13px 14px; border-radius:var(--radius-s); border:1.5px solid var(--line);
+    font-family:inherit; font-size:15px; background:var(--bg); color:var(--ink);
+  }
+  .field textarea{resize:vertical; min-height:90px;}
+  .field input:focus, .field select:focus, .field textarea:focus{border-color:var(--primary);}
+  .form-success{display:none; text-align:center; padding:30px 10px;}
+  .form-success.show{display:block;}
+  .form-success h3{color:var(--primary-dark); font-size:22px;}
+  .form-success p{color:var(--ink-soft); margin-top:10px;}
+  @media (max-width:900px){ .contact-grid{grid-template-columns:1fr;} }
+  @media (max-width:560px){ .form-row{grid-template-columns:1fr;} }
+
+  /* ---------- Footer ---------- */
+  footer{background:var(--primary-dark); color:rgba(255,255,255,.78); padding:56px 0 28px; font-size:14.5px;}
+  .footer-grid{display:grid; grid-template-columns:1.4fr repeat(3, 1fr); gap:36px;}
+  .footer-grid h4{color:#fff; font-size:14px; margin-bottom:16px; font-weight:600;}
+  .footer-grid ul{display:flex; flex-direction:column; gap:10px;}
+  .footer-grid a{text-decoration:none; color:rgba(255,255,255,.78);}
+  .footer-grid a:hover{color:#fff;}
+  .footer-brand strong{font-family:var(--serif); font-size:20px; color:#fff;}
+  .footer-brand p{margin-top:12px; max-width:32ch; color:rgba(255,255,255,.65);}
+  .footer-bottom{
+    margin-top:44px; padding-top:22px; border-top:1px solid rgba(255,255,255,.14);
+    display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; font-size:13px; color:rgba(255,255,255,.55);
+  }
+  @media (max-width:900px){ .footer-grid{grid-template-columns:1fr 1fr; gap:32px 24px;} }
+  @media (max-width:560px){ .footer-grid{grid-template-columns:1fr;} }
+
+  .anchor-offset{scroll-margin-top:96px;}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site" id="siteHeader">
+  <div class="wrap nav-row">
+    <a href="#top" class="logo">
+      <strong>Radfield</strong>
+      <span>Home Care — Watford &amp; Borehamwood</span>
+    </a>
+    <nav class="primary" aria-label="Primary">
+      <a href="#help">Home Care</a>
+      <a href="#help">Live-In Care</a>
+      <a href="#areas">Areas We Cover</a>
+      <a href="#how-it-works">How It Works</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <a class="call-pill" href="tel:+441923624674">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M4 5c0 8.284 6.716 15 15 15l2-3.5-5-2-1.5 1.5c-2.2-1-4-2.8-5-5L11 9.5 9 4.5 5.5 3.5 4 5z"/></svg>
+        <span class="txt">01923 624 674</span>
+      </a>
+      <a class="btn btn-primary" href="#contact">Arrange Care</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div id="mobile-menu" aria-hidden="true">
+  <div class="drawer-head">
+    <span class="logo"><strong>Radfield</strong><span>Watford &amp; Borehamwood</span></span>
+    <button class="nav-toggle" id="navClose" aria-label="Close menu">
+      <svg class="icon" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+  </div>
+  <nav>
+    <a href="#top">Home</a>
+    <a href="#help">Home Care</a>
+    <a href="#help">Live-In Care</a>
+    <a href="#areas">Areas We Cover</a>
+    <a href="#how-it-works">How It Works</a>
+    <a href="#proof">About Us</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <div class="drawer-cta">
+    <a class="btn btn-primary btn-block" href="#contact">Arrange a Care Consultation</a>
+    <a class="btn btn-ghost btn-block" href="tel:+441923624674">Call 01923 624 674</a>
+  </div>
+</div>
+
+<div class="mobile-call-bar">
+  <a class="call" href="tel:+441923624674">
+    <svg class="icon" viewBox="0 0 24 24"><path d="M4 5c0 8.284 6.716 15 15 15l2-3.5-5-2-1.5 1.5c-2.2-1-4-2.8-5-5L11 9.5 9 4.5 5.5 3.5 4 5z"/></svg>
+    Call Us
+  </a>
+  <a class="enquire" href="#contact">Arrange Care</a>
+</div>
+
+<main id="main">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="top">
+    <div class="wrap hero-grid">
+      <div>
+        <h1>Compassionate care, right where you call home.</h1>
+        <p class="lede">Personalised home care and live-in care across Watford, Borehamwood and the surrounding areas — helping you or your loved one live safely, independently and confidently at home.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#contact">Arrange a Care Consultation</a>
+          <a class="btn btn-ghost" href="tel:+441923624674">Call Our Care Team</a>
+        </div>
+        <div class="reassure-row">
+          <div class="reassure-item"><svg class="icon" viewBox="0 0 24 24"><path d="M3 11l9-7 9 7M5 10v10h14V10"/></svg>Local care team</div>
+          <div class="reassure-item"><svg class="icon" viewBox="0 0 24 24"><path d="M4 6h16M4 12h10M4 18h7"/></svg>Personalised care plans</div>
+          <div class="reassure-item"><svg class="icon" viewBox="0 0 24 24"><path d="M12 21s-7-4.35-9.5-9C.5 8 3 4 7 4c2 0 3.8 1.2 5 3 1.2-1.8 3-3 5-3 4 0 6.5 4 4.5 8-2.5 4.65-9.5 9-9.5 9z"/></svg>Compassionate carers</div>
+          <div class="reassure-item"><svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-6 8-6s8 2 8 6"/></svg>Home &amp; live-in care</div>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <svg viewBox="0 0 560 460" xmlns="http://www.w3.org/2000/svg">
+          <rect width="560" height="460" rx="28" fill="#2E4A3B"/>
+          <circle cx="430" cy="90" r="90" fill="#3C5B49"/>
+          <circle cx="90" cy="380" r="120" fill="#25392C"/>
+          <path d="M120 300 L280 190 L440 300 L440 380 L120 380 Z" fill="#EFEAE0"/>
+          <rect x="180" y="300" width="50" height="80" fill="#B08A4E"/>
+          <rect x="330" y="300" width="60" height="55" fill="#7C9483"/>
+          <circle cx="255" cy="270" r="8" fill="#2E4A3B"/>
+          <path d="M280 190 L280 150" stroke="#B08A4E" stroke-width="6" stroke-linecap="round"/>
+          <circle cx="280" cy="140" r="10" fill="#B08A4E"/>
+          <g transform="translate(230,320)">
+            <circle cx="0" cy="0" r="18" fill="#EDE0C6"/>
+            <path d="M-14 26c2-16 10-24 14-24s12 8 14 24" fill="#EDE0C6"/>
+          </g>
+          <g transform="translate(300,325)">
+            <circle cx="0" cy="0" r="16" fill="#F4EEDE"/>
+            <path d="M-13 22c2-14 9-20 13-20s11 6 13 20" fill="#F4EEDE"/>
+          </g>
+          <path d="M60 60 q20 -20 40 0" stroke="#EFEAE0" stroke-width="4" fill="none" stroke-linecap="round" opacity=".5"/>
+          <path d="M480 200 q20 -20 40 0" stroke="#EFEAE0" stroke-width="4" fill="none" stroke-linecap="round" opacity=".4"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TRUST STRIP ============ -->
+  <div class="trust-strip">
+    <div class="wrap trust-row">
+      <div class="trust-item"><svg class="icon" viewBox="0 0 24 24"><path d="M12 3l8 4v5c0 5-3.4 8.4-8 9-4.6-.6-8-4-8-9V7l8-4z"/></svg>Regulated by the Care Quality Commission</div>
+      <div class="trust-item"><svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>Part of a national care family, 40+ years' heritage</div>
+      <div class="trust-item"><svg class="icon" viewBox="0 0 24 24"><path d="M3 11l9-7 9 7M5 10v10h14V10"/></svg>Local Watford &amp; Borehamwood team</div>
+      <div class="trust-item"><svg class="icon" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h10"/></svg>Personalised, one-to-one care plans</div>
+    </div>
+  </div>
+
+  <!-- ============ HOW CAN WE HELP ============ -->
+  <section id="help" class="anchor-offset">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>The right care for you or your loved one</h2>
+        <p>Not sure exactly what's needed yet? That's completely normal. Have a look through the support we offer, or simply give us a call and we'll help you work it out together.</p>
+      </div>
+
+      <div class="help-shell">
+        <div class="help-tabs" role="tablist" aria-label="Care services">
+          <button class="help-tab active" role="tab" aria-selected="true" data-tab="home">Home Care</button>
+          <button class="help-tab" role="tab" aria-selected="false" data-tab="live">Live-In Care</button>
+          <button class="help-tab" role="tab" aria-selected="false" data-tab="companion">Companionship &amp; Personal Support</button>
+          <button class="help-tab" role="tab" aria-selected="false" data-tab="specialist">Specialist Care</button>
+        </div>
+
+        <div class="help-panels">
+          <div class="help-panel active" data-panel="home">
+            <div class="art">
+              <svg viewBox="0 0 300 240"><rect width="300" height="240" rx="20" fill="#E4EAE3"/><path d="M60 140 L150 80 L240 140 L240 200 L60 200 Z" fill="#fff" stroke="#DBD3C2"/><rect x="100" y="150" width="34" height="50" fill="#B08A4E"/><rect x="170" y="150" width="40" height="35" fill="#7C9483"/><circle cx="150" cy="115" r="6" fill="#2E4A3B"/></svg>
+            </div>
+            <div class="text">
+              <h3>Home Care</h3>
+              <p class="desc">Flexible support that helps you remain independent and comfortable in your own home — from short daily visits to several calls a day, built around your routine.</p>
+              <div class="tags"><span>Personal care</span><span>Meal preparation</span><span>Medication support</span><span>Household help</span></div>
+              <a class="btn btn-primary" href="#contact">Explore Home Care</a>
+            </div>
+          </div>
+
+          <div class="help-panel" data-panel="live">
+            <div class="art">
+              <svg viewBox="0 0 300 240"><rect width="300" height="240" rx="20" fill="#EDE0C6"/><circle cx="150" cy="100" r="46" fill="#fff"/><path d="M104 200c0-30 20-46 46-46s46 16 46 46" fill="#fff"/><circle cx="150" cy="95" r="10" fill="#B08A4E"/></svg>
+            </div>
+            <div class="text">
+              <h3>Live-In Care</h3>
+              <p class="desc">Dedicated one-to-one support from a professional carer, available around the clock in the comfort of home — a settled alternative to residential care.</p>
+              <div class="tags"><span>24-hour support</span><span>Companionship</span><span>Continuity of carer</span><span>Complex needs</span></div>
+              <a class="btn btn-primary" href="#contact">Explore Live-In Care</a>
+            </div>
+          </div>
+
+          <div class="help-panel" data-panel="companion">
+            <div class="art">
+              <svg viewBox="0 0 300 240"><rect width="300" height="240" rx="20" fill="#E4EAE3"/><circle cx="120" cy="110" r="30" fill="#fff"/><circle cx="190" cy="120" r="26" fill="#7C9483"/><path d="M80 190c0-22 18-34 40-34s40 12 40 34" fill="#fff"/><path d="M155 195c0-18 15-28 35-28s35 10 35 28" fill="#7C9483"/></svg>
+            </div>
+            <div class="text">
+              <h3>Companionship &amp; Personal Support</h3>
+              <p class="desc">Friendly, respectful support that makes everyday life easier and helps reduce loneliness — conversation, outings, hobbies, and a familiar face to look forward to.</p>
+              <div class="tags"><span>Companionship visits</span><span>Trips into the community</span><span>Respite for family carers</span></div>
+              <a class="btn btn-primary" href="#contact">Discover Your Options</a>
+            </div>
+          </div>
+
+          <div class="help-panel" data-panel="specialist">
+            <div class="art">
+              <svg viewBox="0 0 300 240"><rect width="300" height="240" rx="20" fill="#EDE0C6"/><path d="M150 60v50l35 20" stroke="#2E4A3B" stroke-width="8" fill="none" stroke-linecap="round"/><circle cx="150" cy="120" r="60" fill="none" stroke="#B08A4E" stroke-width="6"/></svg>
+            </div>
+            <div class="text">
+              <h3>Specialist Care</h3>
+              <p class="desc">Trained support for individuals living with dementia, Parkinson's, stroke recovery, cancer or respiratory conditions, plus flexible care after a hospital stay.</p>
+              <div class="tags"><span>Dementia care</span><span>Post-hospital discharge</span><span>Adult day care</span><span>Complex conditions</span></div>
+              <a class="btn btn-primary" href="#contact">View All Care Services</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EMOTIONAL VALUE ============ -->
+  <section class="band-alt">
+    <div class="wrap value-grid">
+      <div class="art" aria-hidden="true">
+        <svg viewBox="0 0 420 480"><rect width="420" height="480" rx="28" fill="#2E4A3B"/><circle cx="210" cy="180" r="90" fill="#3C5B49"/><path d="M120 340c0-50 40-76 90-76s90 26 90 76" fill="#EFEAE0"/><circle cx="210" cy="220" r="10" fill="#B08A4E"/><path d="M60 400h300" stroke="#7C9483" stroke-width="6" stroke-linecap="round"/></svg>
+      </div>
+      <div>
+        <div class="section-head" style="margin-bottom:0;">
+          <h2>Because home is more than just a place.</h2>
+        </div>
+        <ul class="questions">
+          <li>Will Mum be safe?</li>
+          <li>Will Dad still be able to live independently?</li>
+          <li>Will the carer genuinely care about them?</li>
+          <li>Can we trust someone to come into their home?</li>
+          <li>What happens if their needs change?</li>
+        </ul>
+        <div class="value-copy" style="margin-top:24px;">
+          <p>Staying at home means staying close to familiar routines, favourite chairs and a lifetime of memories. It means independence, dignity, and being surrounded by the things that matter most — not a ward, not a waiting list, just home.</p>
+          <p>Our role is to make that possible safely. Every care plan is built around the person, with carers who are properly matched, trained and supported — and a local team you can call, ask questions of, and adjust the plan with as circumstances change.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WHY RADFIELD ============ -->
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Care built around the person, not just the care plan.</h2>
+        <p>Radfield Home Care Watford &amp; Borehamwood is led locally by Lavanya Gamsani and Praveen Kondapally, backed by the training, systems and 40+ years' care heritage of the wider Radfield Home Care family.</p>
+      </div>
+      <div class="benefits">
+        <div class="benefit">
+          <h3>Personalised Care</h3>
+          <p>Every care plan is built around the individual's needs, routines, preferences and goals — not a generic template.</p>
+        </div>
+        <div class="benefit">
+          <h3>Local &amp; Personal</h3>
+          <p>Run by a local team based in Watford, out and about in Watford, Borehamwood, Rickmansworth and the surrounding towns.</p>
+        </div>
+        <div class="benefit">
+          <h3>Compassionate Carers</h3>
+          <p>Care Professionals are recruited for character as well as competence, and matched thoughtfully to the person they support.</p>
+        </div>
+        <div class="benefit">
+          <h3>Continuity of Care</h3>
+          <p>Wherever possible, we aim for familiar faces rather than a rotating cast of strangers coming through the door.</p>
+        </div>
+        <div class="benefit">
+          <h3>Family Reassurance</h3>
+          <p>Families are kept informed and can speak to the local team directly with any questions or concerns, at any stage.</p>
+        </div>
+        <div class="benefit">
+          <h3>Flexible Support</h3>
+          <p>Care can start small and grow — from a single weekly visit to full live-in support — adapting as needs change.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ LOCAL AREA ============ -->
+  <section class="band-alt anchor-offset" id="areas">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Home care in Watford &amp; Borehamwood</h2>
+        <p>We're based on St Albans Road in Watford and provide home care and live-in care across Watford, Borehamwood, Hertsmere, Three Rivers and the surrounding areas.</p>
+      </div>
+      <div class="area-grid">
+        <div>
+          <p style="color:var(--ink-soft); font-size:15.5px;">Areas we currently cover include:</p>
+          <ul class="area-list">
+            <li>Watford</li><li>Borehamwood</li><li>Rickmansworth</li><li>Bushey</li>
+            <li>Croxley Green</li><li>Hertsmere</li><li>Three Rivers</li>
+          </ul>
+          <p style="margin-top:22px; color:var(--ink-soft); font-size:15px;">Not sure if we cover your area? Call the team on <a href="tel:+441923624674" style="color:var(--primary); font-weight:600;">01923 624 674</a> — we're happy to check.</p>
+        </div>
+        <div class="map-frame">
+          <iframe title="Radfield Home Care Watford & Borehamwood office location" loading="lazy" src="https://www.google.com/maps?q=Hille+Business+Centre,+132a+St+Albans+Road,+Watford,+WD24+4AE&output=embed"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ HOW IT WORKS ============ -->
+  <section id="how-it-works" class="anchor-offset">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Getting started is simple</h2>
+        <p>Arranging care can feel like a big step. We've kept the process as straightforward as possible.</p>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <div class="num">01</div>
+          <h3>Talk to us</h3>
+          <p>Tell us about your situation, your concerns and the support you're looking for — no obligation, just a conversation.</p>
+        </div>
+        <div class="step">
+          <div class="num">02</div>
+          <h3>Care assessment</h3>
+          <p>We visit to discuss your needs in more detail and understand what type of support would work best for you or your loved one.</p>
+        </div>
+        <div class="step">
+          <div class="num">03</div>
+          <h3>Your care begins</h3>
+          <p>We create a personalised care plan, carefully match your Care Professional, and arrange your support to start.</p>
+        </div>
+      </div>
+      <div style="margin-top:40px;"><a class="btn btn-primary" href="#contact">Start the Conversation</a></div>
+    </div>
+  </section>
+
+  <!-- ============ FAMILY DECISION MAKER ============ -->
+  <section class="band-alt">
+    <div class="wrap">
+      <div class="family-band">
+        <h2>Looking for care for a parent or loved one?</h2>
+        <p>Finding care for someone you love can feel overwhelming. You may not know what level of support they need, what care could cost, or where to begin. Our local team is here to listen, answer your questions and help you understand your options — at your pace.</p>
+        <a class="btn btn-outline-light" href="#contact">Talk to Our Care Team</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SOCIAL PROOF / ABOUT ============ -->
+  <section id="proof" class="anchor-offset">
+    <div class="wrap proof-grid">
+      <div>
+        <div class="section-head" style="margin-bottom:24px;">
+          <h2>Getting to know your local team</h2>
+          <p>Radfield Home Care Watford &amp; Borehamwood is a locally run branch of the Radfield Home Care family, led by directors Lavanya Gamsani and Praveen Kondapally.</p>
+        </div>
+        <div class="proof-points">
+          <div class="proof-point">
+            <svg class="icon" viewBox="0 0 24 24"><path d="M12 3l8 4v5c0 5-3.4 8.4-8 9-4.6-.6-8-4-8-9V7l8-4z"/></svg>
+            <div><h4>Regulated care</h4><p>Registered with the Care Quality Commission, the independent regulator for health and social care in England.</p></div>
+          </div>
+          <div class="proof-point">
+            <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+            <div><h4>National heritage, local delivery</h4><p>Backed by the systems, training and 40+ years' experience of the wider Radfield Home Care network.</p></div>
+          </div>
+          <div class="proof-point">
+            <svg class="icon" viewBox="0 0 24 24"><path d="M3 11l9-7 9 7M5 10v10h14V10"/></svg>
+            <div><h4>Local & hands-on</h4><p>You'll speak directly to the Watford &amp; Borehamwood team, not a national call centre.</p></div>
+          </div>
+        </div>
+      </div>
+      <div class="social-card">
+        <h3>Follow our story locally</h3>
+        <p>We're a growing local team, and we love sharing what we're up to in the community — from market days to care team updates. Follow along, or ask us to put you in touch with a family we already support.</p>
+        <div class="social-links">
+          <a href="https://www.facebook.com/RadfieldHomeCareWatford/" target="_blank" rel="noopener">Facebook</a>
+          <a href="https://www.instagram.com/radfield_watford/" target="_blank" rel="noopener">Instagram</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CARE COST ============ -->
+  <section class="band-alt">
+    <div class="wrap">
+      <div class="cost-band">
+        <div>
+          <h2>Let's talk about your care needs</h2>
+          <p>Every person's care requirements are different, so costs vary depending on the type and amount of support needed. The clearest way to understand your options is a conversation with our team — no obligation, just honest guidance.</p>
+        </div>
+        <a class="btn btn-primary" href="#contact">Discuss Your Care Options</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section id="contact" class="anchor-offset">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Not sure what kind of care you need?</h2>
+        <p>That's okay. Tell us a little about your situation and our friendly local care team can help you understand your options.</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="row">
+            <svg class="icon" viewBox="0 0 24 24"><path d="M4 5c0 8.284 6.716 15 15 15l2-3.5-5-2-1.5 1.5c-2.2-1-4-2.8-5-5L11 9.5 9 4.5 5.5 3.5 4 5z"/></svg>
+            <div><h4>Phone</h4><a href="tel:+441923624674">01923 624 674</a></div>
+          </div>
+          <div class="row">
+            <svg class="icon" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+            <div><h4>Email</h4><a href="mailto:watford@radfieldhomecare.co.uk">watford@radfieldhomecare.co.uk</a></div>
+          </div>
+          <div class="row">
+            <svg class="icon" viewBox="0 0 24 24"><path d="M12 21s7-6.5 7-12a7 7 0 10-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>
+            <div><h4>Office</h4><span>Hille Business Centre, 132a St Albans Road, Watford, WD24 4AE</span></div>
+          </div>
+          <div class="row">
+            <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+            <div><h4>Office hours</h4><span>Monday–Friday, 9am–5pm. Care is provided 24 hours a day, every day.</span></div>
+          </div>
+        </div>
+
+        <div class="contact-card">
+          <p class="note">No obligation — simply a conversation about your options.</p>
+
+          <form id="enquiryForm">
+            <div class="form-row">
+              <div class="field">
+                <label for="fname">First name</label>
+                <input id="fname" name="fname" type="text" required autocomplete="given-name">
+              </div>
+              <div class="field">
+                <label for="lname">Last name</label>
+                <input id="lname" name="lname" type="text" required autocomplete="family-name">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="field">
+                <label for="phone">Phone</label>
+                <input id="phone" name="phone" type="tel" required autocomplete="tel">
+              </div>
+              <div class="field">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" required autocomplete="email">
+              </div>
+            </div>
+            <div class="field">
+              <label for="who">Who are you looking for care for?</label>
+              <select id="who" name="who">
+                <option>Myself</option>
+                <option>A parent</option>
+                <option>A partner or spouse</option>
+                <option>Another family member or friend</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="type">What type of support are you interested in?</label>
+              <select id="type" name="type">
+                <option>Home care</option>
+                <option>Live-in care</option>
+                <option>Companionship &amp; personal support</option>
+                <option>Specialist / dementia care</option>
+                <option>Not sure yet</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="message">Message (optional)</label>
+              <textarea id="message" name="message" placeholder="Tell us a little about your situation..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Request a Care Consultation</button>
+          </form>
+
+          <div class="form-success" id="formSuccess">
+            <h3>Thank you — we've got your message.</h3>
+            <p>A member of the Watford &amp; Borehamwood care team will be in touch shortly. If your query is urgent, please call us on <a href="tel:+441923624674" style="color:var(--primary); font-weight:600;">01923 624 674</a>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap footer-grid">
+    <div class="footer-brand">
+      <strong>Radfield Home Care</strong>
+      <p>Watford &amp; Borehamwood. Personalised home care and live-in care, delivered locally.</p>
+    </div>
+    <div>
+      <h4>Care Services</h4>
+      <ul>
+        <li><a href="#help">Home Care</a></li>
+        <li><a href="#help">Live-In Care</a></li>
+        <li><a href="#help">Companionship &amp; Personal Support</a></li>
+        <li><a href="#help">Specialist Care</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Company</h4>
+      <ul>
+        <li><a href="#proof">About Us</a></li>
+        <li><a href="#areas">Areas We Cover</a></li>
+        <li><a href="#how-it-works">How It Works</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="tel:+441923624674">01923 624 674</a></li>
+        <li><a href="mailto:watford@radfieldhomecare.co.uk">watford@radfieldhomecare.co.uk</a></li>
+        <li>Hille Business Centre, 132a St Albans Road, Watford, WD24 4AE</li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <span>© 2026 Radfield Home Care Watford &amp; Borehamwood. Operated by Sriram Support Services Limited.</span>
+    <span>Regulated by the Care Quality Commission</span>
+  </div>
+</footer>
+
+<script>
+  // Header scroll shadow
+  const header = document.getElementById('siteHeader');
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 8);
+  }, { passive: true });
+
+  // Mobile menu
+  const navToggle = document.getElementById('navToggle');
+  const navClose = document.getElementById('navClose');
+  const mobileMenu = document.getElementById('mobile-menu');
+  function openMenu(){
+    mobileMenu.classList.add('open');
+    mobileMenu.setAttribute('aria-hidden', 'false');
+    navToggle.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeMenu(){
+    mobileMenu.classList.remove('open');
+    mobileMenu.setAttribute('aria-hidden', 'true');
+    navToggle.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+  }
+  navToggle.addEventListener('click', openMenu);
+  navClose.addEventListener('click', closeMenu);
+  mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+
+  // How can we help — tabs
+  const tabs = document.querySelectorAll('.help-tab');
+  const panels = document.querySelectorAll('.help-panel');
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => { t.classList.remove('active'); t.setAttribute('aria-selected', 'false'); });
+      panels.forEach(p => p.classList.remove('active'));
+      tab.classList.add('active');
+      tab.setAttribute('aria-selected', 'true');
+      document.querySelector('.help-panel[data-panel="' + tab.dataset.tab + '"]').classList.add('active');
+    });
+  });
+
+  // Enquiry form (front-end only — wire to your CRM/email service on launch)
+  const form = document.getElementById('enquiryForm');
+  const success = document.getElementById('formSuccess');
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    form.style.display = 'none';
+    success.classList.add('show');
+    success.setAttribute('tabindex', '-1');
+    success.focus();
+  });
+</script>
+</body>
+</html>
