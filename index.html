@@ -36,17 +36,17 @@
 </script>
 <style>
   :root{
-    --bg: #EFEAE0;
+    --bg: #F4F2ED;
     --surface: #FFFFFF;
-    --ink: #1E2A21;
-    --ink-soft: #4B5A4E;
-    --primary: #2E4A3B;
-    --primary-dark: #203327;
-    --primary-tint: #E4EAE3;
-    --accent: #B08A4E;
-    --accent-soft: #EDE0C6;
-    --line: #DBD3C2;
-    --sage: #7C9483;
+    --ink: #1E2926;
+    --ink-soft: #56635F;
+    --primary: #1F5C55;
+    --primary-dark: #143F3A;
+    --primary-tint: #DCEAE7;
+    --accent: #BE7C4F;
+    --accent-soft: #F0DFC9;
+    --line: #DDE3DF;
+    --sage: #6E8C86;
     --radius-s: 6px;
     --radius-m: 14px;
     --radius-l: 28px;
@@ -264,6 +264,45 @@
   @media (max-width:900px){ .benefits{grid-template-columns:repeat(2,1fr);} }
   @media (max-width:600px){ .benefits{grid-template-columns:1fr;} }
 
+  /* ---------- Awards / accreditations ---------- */
+  .badge-row{display:grid; grid-template-columns:repeat(3, 1fr); gap:20px;}
+  .badge-card{background:var(--surface); border:1px solid var(--line); border-radius:var(--radius-m); padding:26px;}
+  .badge-card h4{font-size:16px; color:var(--primary-dark); margin-bottom:8px;}
+  .badge-card p{font-size:14px; color:var(--ink-soft);}
+  @media (max-width:900px){ .badge-row{grid-template-columns:1fr 1fr;} }
+  @media (max-width:600px){ .badge-row{grid-template-columns:1fr;} }
+
+  .leader-quote{
+    margin:48px 0 0; padding:36px 0 0; border-top:1px solid var(--line);
+    max-width:640px;
+  }
+  .leader-quote p{font-family:var(--serif); font-size:22px; color:var(--primary-dark); font-style:normal; line-height:1.4;}
+  .leader-quote cite{display:block; margin-top:14px; font-style:normal; font-size:14.5px; color:var(--ink-soft); font-weight:600;}
+
+  /* ---------- Team ---------- */
+  .team-grid{display:grid; grid-template-columns:repeat(2, 1fr); gap:32px;}
+  .team-card{display:flex; gap:22px; align-items:flex-start;}
+  .team-card .avatar{width:84px; height:84px; border-radius:50%; overflow:hidden; flex:none;}
+  .team-card h3{font-size:19px; color:var(--primary-dark);}
+  .team-card .role{font-size:13.5px; color:var(--accent); font-weight:600; margin-top:2px;}
+  .team-card .bio{margin-top:10px; font-size:14.5px; color:var(--ink-soft);}
+  @media (max-width:700px){ .team-grid{grid-template-columns:1fr;} }
+  .team-grid-3{grid-template-columns:repeat(3, 1fr);}
+  @media (max-width:900px){ .team-grid-3{grid-template-columns:1fr;} }
+
+  /* ---------- FAQ ---------- */
+  .faq-list{border-top:1px solid var(--line);}
+  .faq-item{border-bottom:1px solid var(--line);}
+  .faq-item summary{
+    display:flex; justify-content:space-between; align-items:center; gap:16px;
+    padding:22px 4px; cursor:pointer; font-family:var(--serif); font-size:18px;
+    color:var(--primary-dark); font-weight:600; list-style:none;
+  }
+  .faq-item summary::-webkit-details-marker{display:none;}
+  .faq-item summary .plus{flex:none; font-size:22px; color:var(--accent); transition:transform .2s ease;}
+  .faq-item[open] summary .plus{transform:rotate(45deg);}
+  .faq-item p{padding:0 4px 22px; color:var(--ink-soft); font-size:15px; max-width:70ch;}
+
   /* ---------- Local area ---------- */
   .area-grid{display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:start;}
   .area-list{display:flex; flex-wrap:wrap; gap:10px; margin-top:24px;}
@@ -444,25 +483,25 @@
       </div>
       <div class="hero-art" aria-hidden="true">
         <svg viewBox="0 0 560 460" xmlns="http://www.w3.org/2000/svg">
-          <rect width="560" height="460" rx="28" fill="#2E4A3B"/>
-          <circle cx="430" cy="90" r="90" fill="#3C5B49"/>
-          <circle cx="90" cy="380" r="120" fill="#25392C"/>
-          <path d="M120 300 L280 190 L440 300 L440 380 L120 380 Z" fill="#EFEAE0"/>
-          <rect x="180" y="300" width="50" height="80" fill="#B08A4E"/>
-          <rect x="330" y="300" width="60" height="55" fill="#7C9483"/>
-          <circle cx="255" cy="270" r="8" fill="#2E4A3B"/>
-          <path d="M280 190 L280 150" stroke="#B08A4E" stroke-width="6" stroke-linecap="round"/>
-          <circle cx="280" cy="140" r="10" fill="#B08A4E"/>
+          <rect width="560" height="460" rx="28" fill="#1F5C55"/>
+          <circle cx="430" cy="90" r="90" fill="#2A7A70"/>
+          <circle cx="90" cy="380" r="120" fill="#0F2E2A"/>
+          <path d="M120 300 L280 190 L440 300 L440 380 L120 380 Z" fill="#F4F2ED"/>
+          <rect x="180" y="300" width="50" height="80" fill="#BE7C4F"/>
+          <rect x="330" y="300" width="60" height="55" fill="#6E8C86"/>
+          <circle cx="255" cy="270" r="8" fill="#1F5C55"/>
+          <path d="M280 190 L280 150" stroke="#BE7C4F" stroke-width="6" stroke-linecap="round"/>
+          <circle cx="280" cy="140" r="10" fill="#BE7C4F"/>
           <g transform="translate(230,320)">
-            <circle cx="0" cy="0" r="18" fill="#EDE0C6"/>
-            <path d="M-14 26c2-16 10-24 14-24s12 8 14 24" fill="#EDE0C6"/>
+            <circle cx="0" cy="0" r="18" fill="#F0DFC9"/>
+            <path d="M-14 26c2-16 10-24 14-24s12 8 14 24" fill="#F0DFC9"/>
           </g>
           <g transform="translate(300,325)">
-            <circle cx="0" cy="0" r="16" fill="#F4EEDE"/>
-            <path d="M-13 22c2-14 9-20 13-20s11 6 13 20" fill="#F4EEDE"/>
+            <circle cx="0" cy="0" r="16" fill="#FBF8F2"/>
+            <path d="M-13 22c2-14 9-20 13-20s11 6 13 20" fill="#FBF8F2"/>
           </g>
-          <path d="M60 60 q20 -20 40 0" stroke="#EFEAE0" stroke-width="4" fill="none" stroke-linecap="round" opacity=".5"/>
-          <path d="M480 200 q20 -20 40 0" stroke="#EFEAE0" stroke-width="4" fill="none" stroke-linecap="round" opacity=".4"/>
+          <path d="M60 60 q20 -20 40 0" stroke="#F4F2ED" stroke-width="4" fill="none" stroke-linecap="round" opacity=".5"/>
+          <path d="M480 200 q20 -20 40 0" stroke="#F4F2ED" stroke-width="4" fill="none" stroke-linecap="round" opacity=".4"/>
         </svg>
       </div>
     </div>
@@ -471,10 +510,10 @@
   <!-- ============ TRUST STRIP ============ -->
   <div class="trust-strip">
     <div class="wrap trust-row">
-      <div class="trust-item"><svg class="icon" viewBox="0 0 24 24"><path d="M12 3l8 4v5c0 5-3.4 8.4-8 9-4.6-.6-8-4-8-9V7l8-4z"/></svg>Regulated by the Care Quality Commission</div>
-      <div class="trust-item"><svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>Part of a national care family, 40+ years' heritage</div>
+      <div class="trust-item"><svg class="icon" viewBox="0 0 24 24"><path d="M12 3l8 4v5c0 5-3.4 8.4-8 9-4.6-.6-8-4-8-9V7l8-4z"/></svg>Registered with the Care Quality Commission</div>
+      <div class="trust-item"><svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12l2.5 2.5L16 9"/></svg>Radfield: Top 20 UK Home Care Group, 9 years running</div>
+      <div class="trust-item"><svg class="icon" viewBox="0 0 24 24"><path d="M12 3l2.4 4.9 5.4.8-3.9 3.8.9 5.4-4.8-2.5-4.8 2.5.9-5.4-3.9-3.8 5.4-.8z"/></svg>Radfield: Gold Winner, Home Care Awards 2026</div>
       <div class="trust-item"><svg class="icon" viewBox="0 0 24 24"><path d="M3 11l9-7 9 7M5 10v10h14V10"/></svg>Local Watford &amp; Borehamwood team</div>
-      <div class="trust-item"><svg class="icon" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h10"/></svg>Personalised, one-to-one care plans</div>
     </div>
   </div>
 
@@ -492,12 +531,13 @@
           <button class="help-tab" role="tab" aria-selected="false" data-tab="live">Live-In Care</button>
           <button class="help-tab" role="tab" aria-selected="false" data-tab="companion">Companionship &amp; Personal Support</button>
           <button class="help-tab" role="tab" aria-selected="false" data-tab="specialist">Specialist Care</button>
+          <button class="help-tab" role="tab" aria-selected="false" data-tab="connected">Connected Care</button>
         </div>
 
         <div class="help-panels">
           <div class="help-panel active" data-panel="home">
             <div class="art">
-              <svg viewBox="0 0 300 240"><rect width="300" height="240" rx="20" fill="#E4EAE3"/><path d="M60 140 L150 80 L240 140 L240 200 L60 200 Z" fill="#fff" stroke="#DBD3C2"/><rect x="100" y="150" width="34" height="50" fill="#B08A4E"/><rect x="170" y="150" width="40" height="35" fill="#7C9483"/><circle cx="150" cy="115" r="6" fill="#2E4A3B"/></svg>
+              <svg viewBox="0 0 300 240"><rect width="300" height="240" rx="20" fill="#DCEAE7"/><path d="M60 140 L150 80 L240 140 L240 200 L60 200 Z" fill="#fff" stroke="#DDE3DF"/><rect x="100" y="150" width="34" height="50" fill="#BE7C4F"/><rect x="170" y="150" width="40" height="35" fill="#6E8C86"/><circle cx="150" cy="115" r="6" fill="#1F5C55"/></svg>
             </div>
             <div class="text">
               <h3>Home Care</h3>
@@ -509,7 +549,7 @@
 
           <div class="help-panel" data-panel="live">
             <div class="art">
-              <svg viewBox="0 0 300 240"><rect width="300" height="240" rx="20" fill="#EDE0C6"/><circle cx="150" cy="100" r="46" fill="#fff"/><path d="M104 200c0-30 20-46 46-46s46 16 46 46" fill="#fff"/><circle cx="150" cy="95" r="10" fill="#B08A4E"/></svg>
+              <svg viewBox="0 0 300 240"><rect width="300" height="240" rx="20" fill="#F0DFC9"/><circle cx="150" cy="100" r="46" fill="#fff"/><path d="M104 200c0-30 20-46 46-46s46 16 46 46" fill="#fff"/><circle cx="150" cy="95" r="10" fill="#BE7C4F"/></svg>
             </div>
             <div class="text">
               <h3>Live-In Care</h3>
@@ -521,7 +561,7 @@
 
           <div class="help-panel" data-panel="companion">
             <div class="art">
-              <svg viewBox="0 0 300 240"><rect width="300" height="240" rx="20" fill="#E4EAE3"/><circle cx="120" cy="110" r="30" fill="#fff"/><circle cx="190" cy="120" r="26" fill="#7C9483"/><path d="M80 190c0-22 18-34 40-34s40 12 40 34" fill="#fff"/><path d="M155 195c0-18 15-28 35-28s35 10 35 28" fill="#7C9483"/></svg>
+              <svg viewBox="0 0 300 240"><rect width="300" height="240" rx="20" fill="#DCEAE7"/><circle cx="120" cy="110" r="30" fill="#fff"/><circle cx="190" cy="120" r="26" fill="#6E8C86"/><path d="M80 190c0-22 18-34 40-34s40 12 40 34" fill="#fff"/><path d="M155 195c0-18 15-28 35-28s35 10 35 28" fill="#6E8C86"/></svg>
             </div>
             <div class="text">
               <h3>Companionship &amp; Personal Support</h3>
@@ -533,13 +573,25 @@
 
           <div class="help-panel" data-panel="specialist">
             <div class="art">
-              <svg viewBox="0 0 300 240"><rect width="300" height="240" rx="20" fill="#EDE0C6"/><path d="M150 60v50l35 20" stroke="#2E4A3B" stroke-width="8" fill="none" stroke-linecap="round"/><circle cx="150" cy="120" r="60" fill="none" stroke="#B08A4E" stroke-width="6"/></svg>
+              <svg viewBox="0 0 300 240"><rect width="300" height="240" rx="20" fill="#F0DFC9"/><path d="M150 60v50l35 20" stroke="#1F5C55" stroke-width="8" fill="none" stroke-linecap="round"/><circle cx="150" cy="120" r="60" fill="none" stroke="#BE7C4F" stroke-width="6"/></svg>
             </div>
             <div class="text">
               <h3>Specialist Care</h3>
               <p class="desc">Trained support for individuals living with dementia, Parkinson's, stroke recovery, cancer or respiratory conditions, plus flexible care after a hospital stay.</p>
               <div class="tags"><span>Dementia care</span><span>Post-hospital discharge</span><span>Adult day care</span><span>Complex conditions</span></div>
               <a class="btn btn-primary" href="#contact">View All Care Services</a>
+            </div>
+          </div>
+
+          <div class="help-panel" data-panel="connected">
+            <div class="art">
+              <svg viewBox="0 0 300 240"><rect width="300" height="240" rx="20" fill="#DCEAE7"/><circle cx="150" cy="120" r="46" fill="#fff" stroke="#1F5C55" stroke-width="4"/><circle cx="150" cy="120" r="10" fill="#BE7C4F"/><path d="M150 74v14M150 152v14M196 120h-14M118 120h-14" stroke="#1F5C55" stroke-width="5" stroke-linecap="round"/></svg>
+            </div>
+            <div class="text">
+              <h3>Connected Care</h3>
+              <p class="desc">Assistive technology that works alongside — or independently of — a care visit, so help is on hand even when a carer isn't in the room: a simple daily check-in, GPS support for getting out and about, and a discreet fall detector.</p>
+              <div class="tags"><span>OKEachDay check-in</span><span>Go GPS</span><span>Fall Detector</span></div>
+              <a class="btn btn-primary" href="#contact">Ask About Connected Care</a>
             </div>
           </div>
         </div>
@@ -551,7 +603,7 @@
   <section class="band-alt">
     <div class="wrap value-grid">
       <div class="art" aria-hidden="true">
-        <svg viewBox="0 0 420 480"><rect width="420" height="480" rx="28" fill="#2E4A3B"/><circle cx="210" cy="180" r="90" fill="#3C5B49"/><path d="M120 340c0-50 40-76 90-76s90 26 90 76" fill="#EFEAE0"/><circle cx="210" cy="220" r="10" fill="#B08A4E"/><path d="M60 400h300" stroke="#7C9483" stroke-width="6" stroke-linecap="round"/></svg>
+        <svg viewBox="0 0 420 480"><rect width="420" height="480" rx="28" fill="#1F5C55"/><circle cx="210" cy="180" r="90" fill="#2A7A70"/><path d="M120 340c0-50 40-76 90-76s90 26 90 76" fill="#F4F2ED"/><circle cx="210" cy="220" r="10" fill="#BE7C4F"/><path d="M60 400h300" stroke="#6E8C86" stroke-width="6" stroke-linecap="round"/></svg>
       </div>
       <div>
         <div class="section-head" style="margin-bottom:0;">
@@ -608,6 +660,101 @@
     </div>
   </section>
 
+  <!-- ============ AWARDS & ACCREDITATIONS ============ -->
+  <section class="band-alt">
+    <div class="wrap">
+      <div class="section-head" style="margin-bottom:36px;">
+        <h2>Backed by national recognition</h2>
+        <p>Radfield Home Care Watford &amp; Borehamwood is part of the wider Radfield Home Care network, recognised nationally for the quality of its care.</p>
+      </div>
+      <div class="badge-row">
+        <div class="badge-card">
+          <h4>Top 20 UK Home Care Group</h4>
+          <p>Ranked among the UK's top home care providers for the ninth year running, out of over 12,000 providers assessed.</p>
+        </div>
+        <div class="badge-card">
+          <h4>Home Care Awards 2026 — Gold Winner</h4>
+          <p>Named Most Outstanding National Home Care Group or Franchise Network at the 2026 Home Care Awards.</p>
+        </div>
+        <div class="badge-card">
+          <h4>Dementia Friendly Gold Accredited</h4>
+          <p>Recognised by Dementia Friendly Hertfordshire for accessible, supportive services for people affected by dementia.</p>
+        </div>
+        <div class="badge-card">
+          <h4>Hertfordshire Care Providers Association</h4>
+          <p>Member of the HCPA, supporting personalised, high-quality care standards across the county.</p>
+        </div>
+        <div class="badge-card">
+          <h4>Age-Friendly Employer Pledge</h4>
+          <p>Signed the pledge to celebrate and value older workers within our care team.</p>
+        </div>
+        <div class="badge-card">
+          <h4>Care Quality Commission</h4>
+          <p>Registered with the CQC, the independent regulator of health and social care in England (registered 19 August 2024).</p>
+        </div>
+        <div class="badge-card">
+          <h4>Living Wage Employer</h4>
+          <p>Accredited by the Living Wage Foundation, ensuring Care Professionals are paid a real living wage.</p>
+        </div>
+        <div class="badge-card">
+          <h4>Armed Forces Covenant</h4>
+          <p>Signatory of the Armed Forces Covenant, supporting members of the armed forces community in the workplace.</p>
+        </div>
+        <div class="badge-card">
+          <h4>Princess Royal Training Award</h4>
+          <p>Recognised in 2025 for the impact of Radfield's carer training and development programme.</p>
+        </div>
+        <div class="badge-card">
+          <h4>Elite Franchise Top 50/100</h4>
+          <p>Consistently ranked among the UK's top-performing franchise networks since 2018.</p>
+        </div>
+      </div>
+      <p style="margin-top:18px; font-size:13.5px; color:var(--ink-soft);">Awards and accreditations recognise the wider Radfield Home Care network; local branch performance is separately regulated by the CQC.</p>
+
+      <blockquote class="leader-quote">
+        <p>“My motivation to be involved in the adult social care sector stems from a genuine desire to enhance the services available to people in need.”</p>
+        <cite>Lavanya Gamsani, Owner &amp; Director</cite>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- ============ MEET THE TEAM ============ -->
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Meet your local team</h2>
+        <p>Radfield Home Care Watford &amp; Borehamwood is owned and led locally — not run from a distant call centre.</p>
+      </div>
+      <div class="team-grid team-grid-3">
+        <div class="team-card">
+          <div class="avatar" aria-hidden="true">
+            <svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="50" fill="#DCEAE7"/><circle cx="50" cy="42" r="18" fill="#1F5C55"/><path d="M18 92c0-24 14-36 32-36s32 12 32 36" fill="#1F5C55"/></svg>
+          </div>
+          <h3>Lavanya Gamsani</h3>
+          <p class="role">Owner &amp; Director</p>
+          <p class="bio">Leads the Watford &amp; Borehamwood office and is the branch's Registered Manager with the CQC, driven by a passion for supporting others with empathy and compassion.</p>
+        </div>
+        <div class="team-card">
+          <div class="avatar" aria-hidden="true">
+            <svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="50" fill="#F0DFC9"/><circle cx="50" cy="42" r="18" fill="#BE7C4F"/><path d="M18 92c0-24 14-36 32-36s32 12 32 36" fill="#BE7C4F"/></svg>
+          </div>
+          <h3>Praveen Kondapally</h3>
+          <p class="role">Owner &amp; Director</p>
+          <p class="bio">Co-owner of the Watford &amp; Borehamwood office, focused on bringing quality, dependable care services to the local community.</p>
+        </div>
+        <div class="team-card">
+          <div class="avatar" aria-hidden="true">
+            <svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="50" fill="#F4F2ED"/><circle cx="50" cy="42" r="18" fill="#143F3A"/><path d="M18 92c0-24 14-36 32-36s32 12 32 36" fill="#143F3A"/></svg>
+          </div>
+          <h3>Georgina-Kate Laird</h3>
+          <p class="role">Day Centre Coordinator</p>
+          <p class="bio">Runs and organises activities at the Watford &amp; Borehamwood Adult Day Care Centre, giving clients a safe, sociable space to enjoy.</p>
+        </div>
+      </div>
+      <p style="margin-top:8px; font-size:14px; color:var(--ink-soft);">Photography placeholder — swap in real team photos before launch.</p>
+    </div>
+  </section>
+
   <!-- ============ LOCAL AREA ============ -->
   <section class="band-alt anchor-offset" id="areas">
     <div class="wrap">
@@ -617,11 +764,27 @@
       </div>
       <div class="area-grid">
         <div>
-          <p style="color:var(--ink-soft); font-size:15.5px;">Areas we currently cover include:</p>
+          <p style="color:var(--ink-soft); font-size:15.5px;">We provide care across Watford, Hertsmere and Three Rivers, including:</p>
+
+          <p style="margin-top:20px; font-weight:600; color:var(--primary-dark); font-size:14.5px;">Watford</p>
           <ul class="area-list">
-            <li>Watford</li><li>Borehamwood</li><li>Rickmansworth</li><li>Bushey</li>
-            <li>Croxley Green</li><li>Hertsmere</li><li>Three Rivers</li>
+            <li>Watford</li><li>Bushey</li><li>Bushey Heath</li><li>Carpenters Park</li>
+            <li>Croxley Green</li><li>Garston</li><li>Holywell</li><li>Leavesden</li>
+            <li>North Watford</li><li>Oxhey</li><li>South Oxhey</li>
           </ul>
+
+          <p style="margin-top:20px; font-weight:600; color:var(--primary-dark); font-size:14.5px;">Hertsmere</p>
+          <ul class="area-list">
+            <li>Borehamwood</li><li>Aldenham</li><li>Elstree</li><li>Letchmore Heath</li>
+            <li>Radlett</li><li>Shenley</li>
+          </ul>
+
+          <p style="margin-top:20px; font-weight:600; color:var(--primary-dark); font-size:14.5px;">Three Rivers</p>
+          <ul class="area-list">
+            <li>Rickmansworth</li><li>Abbots Langley</li><li>Chorleywood</li><li>Kings Langley</li>
+            <li>Maple Cross</li><li>Sarratt</li><li>Chipperfield</li><li>Mill End</li>
+          </ul>
+
           <p style="margin-top:22px; color:var(--ink-soft); font-size:15px;">Not sure if we cover your area? Call the team on <a href="tel:+441923624674" style="color:var(--primary); font-weight:600;">01923 624 674</a> — we're happy to check.</p>
         </div>
         <div class="map-frame">
@@ -647,7 +810,7 @@
         <div class="step">
           <div class="num">02</div>
           <h3>Care assessment</h3>
-          <p>We visit to discuss your needs in more detail and understand what type of support would work best for you or your loved one.</p>
+          <p>Our local manager can usually visit you at home for a free care consultation within 24 hours of your enquiry, to understand what type of support would work best.</p>
         </div>
         <div class="step">
           <div class="num">03</div>
@@ -717,6 +880,38 @@
     </div>
   </section>
 
+  <!-- ============ FAQ ============ -->
+  <section class="band-alt">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Common questions</h2>
+        <p>A few things families in Watford &amp; Borehamwood often ask before getting started.</p>
+      </div>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>How are your Care Professionals recruited and trained?<span class="plus">+</span></summary>
+          <p>Every carer goes through a thorough recruitment process, including full background and DBS checks, followed by induction training covering medication support, mobility, safeguarding and dementia care. We don't use agency staff — our team is directly employed and receives ongoing training and supervision.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Will we always see the same carer?<span class="plus">+</span></summary>
+          <p>Consistency matters, so we aim to match you with a small, familiar team rather than a rotating cast of strangers. If your usual carer is unavailable, we introduce someone from your small team who already knows your routine and care plan.</p>
+        </details>
+        <details class="faq-item">
+          <summary>What if care needs change over time?<span class="plus">+</span></summary>
+          <p>We talk any changes through with you and your family, involve relevant health professionals where needed, and adjust visit times, support levels or introduce overnight care as appropriate — all managed by our office team, so you don't have to coordinate it yourself.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Can I change or cancel a visit?<span class="plus">+</span></summary>
+          <p>Yes. We ask for reasonable notice, but we understand plans change and will do our best to stay flexible around you.</p>
+        </details>
+        <details class="faq-item">
+          <summary>What rating has the CQC given Watford &amp; Borehamwood?<span class="plus">+</span></summary>
+          <p>Our Watford &amp; Borehamwood service registered with the CQC on 19 August 2024 and has not yet received its first inspection. We're happy to talk through what CQC regulation means in the meantime.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
   <!-- ============ CONTACT ============ -->
   <section id="contact" class="anchor-offset">
     <div class="wrap">
@@ -741,7 +936,7 @@
           </div>
           <div class="row">
             <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
-            <div><h4>Office hours</h4><span>Monday–Friday, 9am–5pm. Care is provided 24 hours a day, every day.</span></div>
+            <div><h4>Phone lines</h4><span>Open 24 hours a day, every day. Care is also provided around the clock, seven days a week.</span></div>
           </div>
         </div>
 
@@ -800,6 +995,19 @@
             <p>A member of the Watford &amp; Borehamwood care team will be in touch shortly. If your query is urgent, please call us on <a href="tel:+441923624674" style="color:var(--primary); font-weight:600;">01923 624 674</a>.</p>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CAREERS ============ -->
+  <section class="band-alt">
+    <div class="wrap">
+      <div class="family-band" style="background:var(--primary); display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:24px;">
+        <div style="max-width:520px;">
+          <h2 style="font-size:clamp(22px,2.6vw,28px);">Looking for a new career in care?</h2>
+          <p style="margin-top:10px;">We're always looking for compassionate people to join our Watford &amp; Borehamwood team — competitive pay, paid travel time between visits, and full training provided.</p>
+        </div>
+        <a class="btn btn-outline-light" href="https://careers.radfieldhomecare.co.uk/locations/watford-borehamwood" target="_blank" rel="noopener">View Local Care Jobs</a>
       </div>
     </div>
   </section>
